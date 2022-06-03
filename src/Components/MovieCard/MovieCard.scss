@@ -1,0 +1,38 @@
+.card{
+    min-width: 10rem;
+    max-width: 20rem;
+    margin: 1rem;
+    &__image{
+        width: 100%;
+        object-fit: contain;
+    }
+    &__content{
+        font-family: 'Roboto', sans-serif;
+        text-decoration: none;
+        a{
+            color: #333333;
+        }
+    }
+    &__title{
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+        // height: 3rem;
+        padding-bottom: 1rem;
+        border-bottom: #33333311 1px solid;
+    }
+
+    &__ratingWrapper{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        img{
+            width: 1rem;
+            height: 1rem;
+            margin-right: 0.5rem;
+        }
+    }
+    
+
+    
+}
