@@ -1,0 +1,100 @@
+.detail{
+    height: 100vh;
+    overflow: hidden;
+    
+    &__content{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "info cover";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        max-width: 1440px;
+        &__info{
+            grid-area: info;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            h1{
+                text-transform: uppercase;
+                font-size: 4rem;
+                font-weight: bold;
+                margin-bottom: 0.5rem;
+                font-weight: 900;
+
+                // height: 3rem;
+                padding-bottom: 1rem;
+                border-bottom: #33333311 1px solid;
+            }
+            p{
+                font-size: 1.5rem;
+                margin-bottom: 0.5rem;
+            }
+            &__ratingWrapper{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 0;
+            img{
+                width: 1.2rem;
+                height: 1.2rem;
+                margin-right: 0.5rem;
+            }
+            p{
+                margin: 0;
+            }
+            }
+        }
+        &__cover{
+            margin: 0 auto;
+            grid-area: cover;
+            width: 35vh;
+        }
+    }
+    &__background{
+        z-index: -1;
+        object-fit: cover;
+        width: 100%; 
+        height: 100%;
+        mask-image: linear-gradient(to right, rgba(0,0,0,0) 30%,rgba(0,0,0,0.65) 100%);
+-webkit-mask-image: linear-gradient(to right, rgba(0,0,0,0) 30%,rgba(0,0,0,0.65) 100%);
+    }
+}
+
+@media(max-width: 2140px){
+    .detail{
+        height: auto;
+        &__content{
+            grid-template-columns: 1fr;
+            grid-template-rows: auto 1fr;
+            grid-template-areas: "cover""info";  
+            top: 70%;
+     
+            
+            &__info{
+                text-align: center;
+                align-items: center;
+                h1{
+                    font-size: 2rem;
+                    padding-top: 1rem;
+                }
+                p{
+                    font-size: 1.2rem;
+                }
+                
+            }
+        }
+        &__background{
+            z-index: -1;
+            object-fit: cover;
+            
+            height: 50vh;
+            mask-image: linear-gradient(to top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+    -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+        }
+    }
+}

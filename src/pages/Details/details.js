@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { fetchMovie } from "../../utils/fetch";
+import star from "../../assets/img/star.webp";
+
+import "./details.scss";
 
 export const Details = () => {
   const { movieId } = useParams();
@@ -23,19 +26,29 @@ export const Details = () => {
     vote_average,
   } = movie;
   return (
-    <>
-      <h1>{original_title}</h1>
-      <div>{overview}</div>
-      <div>{release_date}</div>
-      <div>{vote_average}</div>
+    <div className="detail">
       <img
-        alt={original_title + " poster"}
-        src={`https://image.tmdb.org/t/p/w500${poster_path}`}
-      />
-      <img
+        className="detail__background"
         alt={original_title + " alternative poster"}
-        src={`https://image.tmdb.org/t/p/w500${backdrop_path}`}
+        src={`https://image.tmdb.org/t/p/original${backdrop_path}`}
       />
-    </>
+
+      <div className="detail__content">
+        <img
+          className="detail__content__cover"
+          alt={original_title + " poster"}
+          src={`https://image.tmdb.org/t/p/w500${poster_path}`}
+        />
+        <div className="detail__content__info">
+          <h1>{original_title}</h1>
+          <div className="detail__content__info__ratingWrapper">
+            <img className="card__star" src={star} alt="star" />
+            <p>{vote_average} / 10</p>
+          </div>
+          <p>{overview}</p>
+          <p>{release_date}</p>
+        </div>
+      </div>
+    </div>
   );
 };

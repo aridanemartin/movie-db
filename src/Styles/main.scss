@@ -1,7 +1,6 @@
 @import './normalize.scss';
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,900&display=swap');
 
-a{
-    text-decoration: none;
-    color: inherit;
+html{
+    font-family: 'Roboto', sans-serif;;
 }

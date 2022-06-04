@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { MoviesLayout } from "../../Components/MoviesLayout";
+import { Layout } from "../../Components/Layout";
 import { MovieCard } from "../../Components/MovieCard";
 import { fetchData } from "../../utils/fetch";
 
@@ -18,11 +18,11 @@ function Home() {
 
   return (
     <div className="home">
-      <MoviesLayout>
+      <Layout gridLayout>
         {movies.map((movie) => {
           return <MovieCard key={movie.id} data={movie} />;
         })}
-      </MoviesLayout>
+      </Layout>
     </div>
   );
 }

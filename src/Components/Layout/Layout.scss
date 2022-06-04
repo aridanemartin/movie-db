@@ -1,8 +1,13 @@
-.MoviesLayout{
+.gridLayout{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
+.pageLayout{
     margin: 0 auto;
     max-width: 1440px;
 }
