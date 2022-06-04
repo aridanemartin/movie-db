@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import { pageVariants } from "../../utils/pageTransitions";
 import { useMovie } from "../../hooks/useMovie/useMovie";
 import star from "../../assets/img/star.webp";
 
 import "./details.scss";
+import { NavBar } from "../../Components/NavBar";
 
 export const Details = () => {
   const { movieId } = useParams();
@@ -47,6 +48,9 @@ export const Details = () => {
             <p>{vote_average} / 10</p>
           </div>
           <p>{overview}</p>
+          <Link to="/">
+            <button>Go Back</button>
+          </Link>
         </div>
       </div>
     </motion.div>

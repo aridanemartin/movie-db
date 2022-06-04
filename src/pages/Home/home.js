@@ -1,14 +1,15 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Layout } from "../../Components/Layout";
 import { MovieCard } from "../../Components/MovieCard";
 import { Pagination } from "../../Components/Pagination/Pagination";
-import { fetchData } from "../../utils/fetch";
 import { motion } from "framer-motion";
 import { pageVariants } from "../../utils/pageTransitions";
 import ImageGallery from "react-image-gallery";
 import { useMovie } from "../../hooks/useMovie/useMovie";
 
 import "./home.scss";
+import { NavBar } from "../../Components/NavBar";
+import { DarkModeContext } from "../../contexts/DarkModeProvider/DarkModeProvider";
 
 function Home() {
   const [disableBack, setDisableBack] = useState(false);
@@ -18,7 +19,7 @@ function Home() {
     getMovies();
   }, [actualPage]);
 
-  console.log(movies);
+  const { darkMode } = useContext(DarkModeContext);
 
   const images = [];
 
@@ -38,11 +39,11 @@ function Home() {
       animate="in"
       exit="out"
       variants={pageVariants}
-      className="home"
+      className={darkMode ? "home dark" : "home"}
     >
-      {" "}
+      <NavBar />
       <div className="home__title">
-        <h1>The best movie reviews</h1>
+        <h1>The best movie reviews on the internet</h1>
         <p>
           Discover the best movies to watch, new movie reviews and film
           trailers, plus the latest film releases worldwide.
