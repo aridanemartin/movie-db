@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { fetchMovie } from "../../utils/fetch";
+import { motion } from "framer-motion";
+import { pageVariants } from "../../utils/pageTransitions";
 import star from "../../assets/img/star.webp";
 
 import "./details.scss";
@@ -17,16 +19,16 @@ export const Details = () => {
   if (loading) {
     return <div>Loading...</div>;
   }
-  const {
-    original_title,
-    overview,
-    poster_path,
-    backdrop_path,
-    release_date,
-    vote_average,
-  } = movie;
+  const { original_title, overview, poster_path, backdrop_path, vote_average } =
+    movie;
   return (
-    <div className="detail">
+    <motion.div
+      initial="initial"
+      animate="in"
+      exit="out"
+      variants={pageVariants}
+      className="detail"
+    >
       <img
         className="detail__background"
         alt={original_title + " alternative poster"}
@@ -46,9 +48,8 @@ export const Details = () => {
             <p>{vote_average} / 10</p>
           </div>
           <p>{overview}</p>
-          <p>{release_date}</p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };

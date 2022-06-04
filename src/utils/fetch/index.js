@@ -2,6 +2,7 @@ const API = process.env.REACT_APP_API_KEY;
 
 export const fetchData = async (setMovies, setLoading, actualPage) => {
   try {
+    setLoading(true);
     const response = await fetch(
       `https://api.themoviedb.org/3/movie/popular?api_key=${API}&language=en-US&page=${actualPage}`
     );
@@ -21,6 +22,7 @@ export const fetchData = async (setMovies, setLoading, actualPage) => {
 
 export const fetchMovie = async (setMovie, movieId, setLoading) => {
   try {
+    setLoading(true);
     const response = await fetch(
       `https://api.themoviedb.org/3/movie/${movieId}?api_key=${API}&language=en-US&append_to_response=videos`
     );
@@ -31,8 +33,9 @@ export const fetchMovie = async (setMovie, movieId, setLoading) => {
     }
     const data = await response.json();
     setMovie(data);
-    setLoading(false);
   } catch (err) {
     setMovie(null);
+  } finally {
+    setLoading(false);
   }
 };
