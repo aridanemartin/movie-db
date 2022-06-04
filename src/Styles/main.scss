@@ -1,6 +1,32 @@
 @import './normalize.scss';
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,900&display=swap');
+// react-image-gallery styles
+@import "~react-image-gallery/styles/scss/image-gallery.scss";
 
 html{
     font-family: 'Roboto', sans-serif;;
+}
+
+// .image-gallery{
+//     margin-bottom: 3rem;
+// }
+
+.image-gallery{
+    overflow: hidden;
+    height: 100vh;
+}
+
+.image-gallery-content .image-gallery-slide .image-gallery-image {
+    width: 100%;
+}
+
+.image-gallery-slide .image-gallery-image {
+    object-fit: cover;
+    filter: brightness(50%);
+}
+
+@media(max-width: 1000px){
+    .image-gallery{
+        display: none;
+    }
 }

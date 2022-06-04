@@ -1,1 +1,33 @@
+.home__title{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    h1{
+        color: white;
+    
+    font-size: 4rem;
+    width: 20ch;
+    text-transform: uppercase;
+    
+    }
+    p{
+        margin: 0;
+        font-size: 1.5rem;
+        color: white;
+        width: 35ch;
+    }
+}
 
+@media(max-width: 1000px){
+    .home__title{
+        display: none;
+    }
+}

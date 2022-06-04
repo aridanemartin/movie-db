@@ -1,19 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { fetchMovie } from "../../utils/fetch";
 import { motion } from "framer-motion";
 import { pageVariants } from "../../utils/pageTransitions";
+import { useMovie } from "../../hooks/useMovie/useMovie";
 import star from "../../assets/img/star.webp";
 
 import "./details.scss";
 
 export const Details = () => {
   const { movieId } = useParams();
-  const [movie, setMovie] = useState();
-  const [loading, setLoading] = useState(true);
+  const { getMovie, loading, movie } = useMovie();
 
   useEffect(() => {
-    fetchMovie(setMovie, movieId, setLoading, loading);
+    getMovie(movieId);
   }, [movieId]);
 
   if (loading) {
