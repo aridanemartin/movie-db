@@ -12,7 +12,7 @@ export const Pagination = ({ setPage }) => {
   return (
     <>
       {loading ? (
-        <h1>"Loading"</h1>
+        <h1>"Loading..."</h1>
       ) : (
         <div className="pagination">
           <PaginationUi count={500} onChange={handleChange} />

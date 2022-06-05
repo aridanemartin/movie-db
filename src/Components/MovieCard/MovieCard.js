@@ -22,9 +22,9 @@ export const MovieCard = ({ data }) => {
         }
       >
         <Link to={`movie/${data.id}`}>
-          <h1 className={darkMode ? "card__title-dark" : "card__title"}>
+          <h2 className={darkMode ? "card__title-dark" : "card__title"}>
             {data.title}
-          </h1>
+          </h2>
         </Link>
 
         <div className="card__ratingWrapper">
