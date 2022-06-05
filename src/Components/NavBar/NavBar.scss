@@ -7,7 +7,7 @@
     background: white;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     &-dark{
-        background: #333333;
+        background: #000000;
     }
     &__logo{
         display: flex;
@@ -31,10 +31,10 @@
         width: 9rem;
 
         img{
-            height: 2rem;
+            height: 1.8rem;
         }
         .MuiSwitch-track{
-            background-color: black;
+            background-color: rgb(135, 135, 135);
         }
         .MuiTypography-root{
             color: white;
@@ -50,6 +50,10 @@
             height: 80%;
         }
         &__themeSelector{
+            justify-content: space-evenly;
+            img{
+                height: 1.5rem;
+            }
             .MuiTypography-root{
                 width: 10ch;
                 text-align: center;

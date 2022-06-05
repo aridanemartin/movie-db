@@ -3,10 +3,11 @@ import { Link, useParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import { pageVariants } from "../../utils/pageTransitions";
 import { useMovie } from "../../hooks/useMovie/useMovie";
+import { css } from "@emotion/react";
+import { ClipLoader } from "react-spinners";
 import star from "../../assets/img/star.webp";
 
 import "./details.scss";
-import { NavBar } from "../../Components/NavBar";
 
 export const Details = () => {
   const { movieId } = useParams();
@@ -17,7 +18,17 @@ export const Details = () => {
   }, [movieId]);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return (
+      <div className="loadingPage">
+        <ClipLoader
+          color="#000000"
+          loading={loading}
+          size={70}
+          speedMultiplier="0.6"
+        />
+        <p>Your next favourite movie is waiting for you</p>
+      </div>
+    );
   }
   const { original_title, overview, poster_path, backdrop_path, vote_average } =
     movie;

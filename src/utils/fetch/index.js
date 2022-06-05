@@ -36,6 +36,13 @@ export const fetchMovie = async (setMovie, movieId, setLoading) => {
   } catch (err) {
     setMovie(null);
   } finally {
-    setLoading(false);
+    const waitForLoading = () => {
+      return new Promise(() => {
+        setTimeout(() => {
+          setLoading(false);
+        }, 1200);
+      });
+    };
+    waitForLoading();
   }
 };

@@ -27,8 +27,7 @@ export const NavBar = () => {
       <div className="navWrapper__themeSelector">
         <img src={darkMode ? sun : moon} alt={darkMode ? "sun" : "moon"} />
         <FormControlLabel
-          size="big"
-          control={<Switch color="default" />}
+          control={<Switch size="medium" color="default" />}
           onChange={switchHandler}
         />
       </div>
