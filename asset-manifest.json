@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/movie-db/static/css/main.7f995f50.css",
-    "main.js": "/movie-db/static/js/main.c72c414b.js",
+    "main.js": "/movie-db/static/js/main.1a8b062e.js",
     "static/js/787.3daf3fd3.chunk.js": "/movie-db/static/js/787.3daf3fd3.chunk.js",
     "static/media/aridaneLogo.webp": "/movie-db/static/media/aridaneLogo.6d98ffe48cfd7b913ee6.webp",
     "static/media/star.webp": "/movie-db/static/media/star.800579d68c57ff74edaf.webp",
@@ -9,11 +9,11 @@
     "static/media/sun.webp": "/movie-db/static/media/sun.10903aba60bf92179edc.webp",
     "static/media/moon.webp": "/movie-db/static/media/moon.66e42c4ddbe1cc7bb758.webp",
     "main.7f995f50.css.map": "/movie-db/static/css/main.7f995f50.css.map",
-    "main.c72c414b.js.map": "/movie-db/static/js/main.c72c414b.js.map",
+    "main.1a8b062e.js.map": "/movie-db/static/js/main.1a8b062e.js.map",
     "787.3daf3fd3.chunk.js.map": "/movie-db/static/js/787.3daf3fd3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7f995f50.css",
-    "static/js/main.c72c414b.js"
+    "static/js/main.1a8b062e.js"
   ]
 }
