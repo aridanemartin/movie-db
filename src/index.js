@@ -12,7 +12,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <AnimatePresence>
     <DarkModeProvider>
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/movie/:movieId" element={<Details />} />
@@ -21,5 +21,3 @@ root.render(
     </DarkModeProvider>
   </AnimatePresence>
 );
-
-reportWebVitals();
