@@ -22,7 +22,7 @@
             padding-bottom: 5rem;
             h1{
                 text-transform: uppercase;
-                font-size: 4rem;
+                font-size: 2rem;
                 font-weight: bold;
                 margin-bottom: 0.5rem;
                 font-weight: 900;
@@ -32,9 +32,10 @@
                 border-bottom: #33333311 1px solid;
             }
             p{
-                font-size: 1.5rem;
+                font-size: 1.2rem;
                 margin-bottom: 0.5rem;
                 color: #333333;
+                padding-right: 1rem;
             }
             button{
                 cursor: pointer;
@@ -67,7 +68,7 @@
             }
         }
         &__cover{
-            margin: 0 auto;
+            margin: auto;
             grid-area: cover;
             width: 35vh;
         }
@@ -82,7 +83,7 @@
     }
 }
 
-@media(max-width: 2140px){
+@media(max-width: 1025px){
     .detail{
         height: auto;
         &__content{
@@ -100,6 +101,7 @@
                 }
                 p{
                     font-size: 1.2rem;
+                    padding: 0;
                 }    
             }
         }
@@ -115,8 +117,12 @@
 }
 
 @media(max-width: 768px){
+    
     .detail{
         min-width: 90%;
+        &__content{
+        // width: 90%;
+    }
     }
 }
 
